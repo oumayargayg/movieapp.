@@ -3,7 +3,7 @@ import { Rate } from 'antd';
 
 const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
 
-const Rating = ({rating, setRating}) => {
+const Rating = ({rating, setRating, isMovieRating, movieRating}) => {
     
 
     const handleChange = value => {
@@ -11,10 +11,15 @@ const Rating = ({rating, setRating}) => {
     };
     
         return (
-        <span>
-            <Rate tooltips={desc} onChange={handleChange} value={rating} />
-            {rating ? <span className="ant-rate-text">{desc[rating - 1]}</span> : ''}
-        </span>
+            isMovieRating 
+            ?
+            <span>
+                <Rate disabled value={movieRating} />
+            </span>
+            :
+            <span>
+                <Rate tooltips={desc} onChange={handleChange} value={rating} />
+            </span>
         );
     }
 

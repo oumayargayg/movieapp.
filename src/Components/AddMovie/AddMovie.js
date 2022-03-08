@@ -37,8 +37,8 @@ const AddMovie = ({add}) => {
         <div>
             
         <>
-            <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
+            <Button className='BoutAdd' variant="primary" onClick={handleShow}>
+                Add a Movie
             </Button>
 
         <Modal show={show} onHide={handleClose}>

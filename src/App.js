@@ -21,10 +21,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Movie App Workshop </h1>
+      
+      
       <FilterByName inputSearch={inputSearch} setInputSearch={setInputSearch} />
       <FilterByRate rating={rating} setRating={setRating} />
-      <MovieList movies={movies} inputSearch={inputSearch} /> 
+      <MovieList movies={movies} inputSearch={inputSearch} isMovieRating ={false} rating={rating} /> 
       <AddMovie add={add} />
     </div>
   );
